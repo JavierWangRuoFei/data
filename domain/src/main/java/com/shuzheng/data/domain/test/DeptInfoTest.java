@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "dept_info")
-public class DeptInfo {
+public class DeptInfoTest {
     @Id
     @Column(name = "id", nullable = false, unique = true)
     @GeneratedValue

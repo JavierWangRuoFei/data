@@ -1,14 +1,12 @@
 package com.shuzheng.data.controll.web;
 
 import com.shuzheng.data.domain.DeptInfo;
+import com.shuzheng.data.domain.test.DeptInfoTest;
 import com.shuzheng.data.service.DeptInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 
 /**
@@ -38,7 +36,7 @@ public class DeptInfoWeb {
         return deptInfoService.findAll();
     }
     @PostMapping(value = "/data/test/all")
-    public List<com.shuzheng.data.domain.test.DeptInfo> findAllTest() {
+    public List<DeptInfoTest> findAllTest() {
         return deptInfoServiceTest.findAll();
     }
 }

@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @Configuration
-@RestController
+@EnableAutoConfiguration()
 @ComponentScan(basePackages={"com.shuzheng.data"})
-@EnableJpaRepositories({"com.shuzheng.data.persistent"})
 @EntityScan({"com.shuzheng.data.domain"})
 public class DataApplication {
 

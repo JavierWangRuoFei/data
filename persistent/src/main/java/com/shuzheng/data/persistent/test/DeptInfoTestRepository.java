@@ -1,9 +1,9 @@
 package com.shuzheng.data.persistent.test;
 
-import com.shuzheng.data.domain.test.DeptInfo;
+import com.shuzheng.data.domain.test.DeptInfoTest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface DeptInfoTestRepository extends JpaRepository<DeptInfo, Integer> {
+public interface DeptInfoTestRepository extends JpaRepository<DeptInfoTest, Integer> {
 //    Iterable<DeptInfo> findAll();
 }

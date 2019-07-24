@@ -1,6 +1,6 @@
 package com.shuzheng.data.service.test.impl;
 
-import com.shuzheng.data.domain.test.DeptInfo;
+import com.shuzheng.data.domain.test.DeptInfoTest;
 import com.shuzheng.data.persistent.test.DeptInfoTestRepository;
 import com.shuzheng.data.service.test.DeptInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,11 +29,11 @@ public class DeptInfoServiceImpl implements DeptInfoService {
 //    }
 
     @Override
-    public List<DeptInfo> findAll() {
-        List<DeptInfo> deptInfos = new ArrayList<>();
+    public List<DeptInfoTest> findAll() {
+        List<DeptInfoTest> deptInfos = new ArrayList<>();
         Sort.Order order = Sort.Order.asc("id");
         Sort sort = Sort.by(order);
-        Iterable<DeptInfo> deptInfoIterable = deptInfoTestRepository.findAll();
+        Iterable<DeptInfoTest> deptInfoIterable = deptInfoTestRepository.findAll();
         deptInfoIterable.forEach(record -> {
             deptInfos.add(record);
         });

@@ -29,9 +29,9 @@ import java.util.Map;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        basePackages = {"com.shuzheng.data.domain"},
-        entityManagerFactoryRef = "entityManagerFactoryPrimary",
-        transactionManagerRef = "transactionManagerPrimary"
+        basePackages = {"com.shuzheng.data.persistent.test"},
+        entityManagerFactoryRef = "entityManagerFactorySecond",
+        transactionManagerRef = "transactionManagerSecond"
 )
 public class SecondConfig {
     private static final Logger log = LoggerFactory.getLogger(PrimaryConfig.class);
@@ -56,13 +56,6 @@ public class SecondConfig {
         factoryBean.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         factoryBean.setJpaPropertyMap(getVendorProperties());
         return factoryBean;
-
-//        return builder
-//                .dataSource(secondDataSource)
-//                .properties(getVendorProperties())
-//                .packages("com.shuzheng.data.domain.test")
-//                .persistenceUnit("primaryPersistenceUnit")
-//                .build();
     }
     private Map<String, String> getVendorProperties() {
         return jpaProperties.getProperties();

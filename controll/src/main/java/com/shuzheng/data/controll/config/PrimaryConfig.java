@@ -31,7 +31,7 @@ import java.util.Map;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(
-        basePackages = {"com.shuzheng.data.domain"},
+        basePackages = {"com.shuzheng.data.persistent"},
         entityManagerFactoryRef = "entityManagerFactoryPrimary",
         transactionManagerRef = "transactionManagerPrimary"
 )

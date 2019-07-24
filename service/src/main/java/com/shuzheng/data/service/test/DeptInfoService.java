@@ -1,10 +1,10 @@
 package com.shuzheng.data.service.test;
 
 
-import com.shuzheng.data.domain.test.DeptInfo;
+import com.shuzheng.data.domain.test.DeptInfoTest;
 
 import java.util.List;
 
 public interface DeptInfoService {
-    List<DeptInfo> findAll();
+    List<DeptInfoTest> findAll();
 }
