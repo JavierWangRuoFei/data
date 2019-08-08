@@ -8,6 +8,7 @@
 		<module>persistent</module>
 		<module>service</module>
 		<module>controll</module>
+		<module>hiveudtf</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -23,20 +24,32 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<hive.version>2.0.1</hive.version>
+		<hadoop.version>2.7.2</hadoop.version>
 	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<!-- https://mvnrepository.com/artifact/org.apache.hive/hive-jdbc -->
+			<dependency>
+				<groupId>org.apache.hive</groupId>
+				<artifactId>hive-jdbc</artifactId>
+				<version>${hive.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-common -->
+			<dependency>
+				<groupId>org.apache.hadoop</groupId>
+				<artifactId>hadoop-common</artifactId>
+				<version>${hadoop.version}</version>
+			</dependency>
+			<!-- https://mvnrepository.com/artifact/org.apache.hive/hive-exec -->
+			<dependency>
+				<groupId>org.apache.hive</groupId>
+				<artifactId>hive-exec</artifactId>
+				<version>${hive.version}</version>
+			</dependency>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+		</dependencies>
+	</dependencyManagement>
 
 	<build>
 		<plugins>
